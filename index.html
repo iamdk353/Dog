@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogram</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./external.css">
+  <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
+</head>
+
+<body class="w-screen h-screen overflow-x-hidden grid place-content-center bg-red-100">
+  <div class="w-0 h-screen bg-red-400 absolute z-20" id="likesGrid" style="display:none; width: 0px;">
+    <button class="w-icon h-icon bg-red-900 relative rounded-full font text-white shadow-sm" id="wrong"
+      style="font-size: 2vh; margin-top: 2vh; margin-left:2vh;">X</button>
+    <div class="bg-red-200 w-full h-grid p-4 grid grid-cols-4 overflow-scroll gap-5 " id="lastGrid">
+
+    </div>
+  </div>
+  <div class="w-full h-full  relative select-none" id="main">
+
+    <nav class="w-full h-nav flex items-center justify-around absolute  bottom-0 left-0 backdrop-blur-3xl ">
+
+      <svg viewBox="0 0 24 24" stroke-width="0.5" stroke="black" class="w-icon h-icon   cursor-pointer bg-opacity-100"
+        id="like" style="fill:white">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+
+
+      <svg fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="black"
+        class="w-icon h-icon   cursor-pointer bg-opacity-100" id="extend">
+        <path fill-rule="evenodd"
+          d="M15 3.75a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V5.56l-3.97 3.97a.75.75 0 11-1.06-1.06l3.97-3.97h-2.69a.75.75 0 01-.75-.75zm-12 0A.75.75 0 013.75 3h4.5a.75.75 0 010 1.5H5.56l3.97 3.97a.75.75 0 01-1.06 1.06L4.5 5.56v2.69a.75.75 0 01-1.5 0v-4.5zm11.47 11.78a.75.75 0 111.06-1.06l3.97 3.97v-2.69a.75.75 0 011.5 0v4.5a.75.75 0 01-.75.75h-4.5a.75.75 0 010-1.5h2.69l-3.97-3.97zm-4.94-1.06a.75.75 0 010 1.06L5.56 19.5h2.69a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75v-4.5a.75.75 0 011.5 0v2.69l3.97-3.97a.75.75 0 011.06 0z"
+          clip-rule="evenodd" />
+      </svg>
+      <svg fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="black"
+        class="w-icon h-icon   cursor-pointer bg-opacity-100" id="ViewLikes">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+
+      <svg fill="white" viewBox="0 0 24 24" stroke-width="0.7" stroke="black"
+        class="w-icon h-icon   cursor-pointer bg-opacity-100" id="Quiz">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+      </svg>
+
+      <!-- <svg fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="black"
+        class="w-icon h-icon   cursor-pointer bg-opacity-100 " id="notFound">
+        <path fill-rule="evenodd"
+          d="M3.28 2.22a.75.75 0 00-1.06 1.06l14.5 14.5a.75.75 0 101.06-1.06l-1.745-1.745a10.029 10.029 0 003.3-4.38 1.651 1.651 0 000-1.185A10.004 10.004 0 009.999 3a9.956 9.956 0 00-4.744 1.194L3.28 2.22zM7.752 6.69l1.092 1.092a2.5 2.5 0 013.374 3.373l1.091 1.092a4 4 0 00-5.557-5.557z"
+          clip-rule="evenodd" />
+        <path
+          d="M10.748 13.93l2.523 2.523a9.987 9.987 0 01-3.27.547c-4.258 0-7.894-2.66-9.337-6.41a1.651 1.651 0 010-1.186A10.007 10.007 0 012.839 6.02L6.07 9.252a4 4 0 004.678 4.678z" />
+      </svg> -->
+      <svg fill="white" viewBox="0 0 24 24" stroke-width="0.5" stroke="black"
+        class="w-icon h-icon   cursor-pointer bg-opacity-100 " id="next">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
+      </svg>
+
+
+
+    </nav>
+
+    <div class="w-half h-half  bg-red-400" id="photo">
+
+    </div>
+  </div>
+  <div id="quizMode"
+    class="w-lessHalf h-lessHeight bg-red-100 absolute grid place-content-center border border-red-500 rounded-md select-none"
+    style="top:20vh; right:5vh; display: none;">
+    <div class="w-0 bg-red-500 h-one mx-auto relative" id="Bar">
+    </div>
+    <svg fill="#EE4444" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-icon z-10 relative"
+      style="top:-2vh; left:-2vw;">
+      <path stroke-linecap="round" stroke-linejoin="round" id="hint"
+        d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+    </svg>
+
+    <ul class="h-imgh w-ul">
+      <li style="margin-top: 1vh; font-size: 3vh;"
+        class=" bg-red-500 h-list hover:rounded-lg hover:scale-105 hover:cursor-pointer list-js grid place-content-center"
+        id="options">
+        Loading....
+      </li>
+      <li style="margin-top: 1vh; font-size: 3vh;"
+        class=" bg-red-500 h-list hover:rounded-lg hover:scale-105 hover:cursor-pointer list-js grid place-content-center"
+        id="options">
+        Loading....
+      </li>
+      <li style="margin-top: 1vh; font-size: 3vh;"
+        class=" bg-red-500 h-list hover:rounded-lg hover:scale-105 hover:cursor-pointer list-js grid place-content-center"
+        id="options">
+        Loading....
+      </li>
+      <li style="margin-top: 1vh; font-size: 3vh;"
+        class=" bg-red-500 h-list hover:rounded-lg hover:scale-105 hover:cursor-pointer list-js grid place-content-center"
+        id="options">
+        Loading....
+      </li>
+
+    </ul>
+    <p style="font-size: 3vh;">SCORE : <span id="scoreHolder">0</span></p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script type="module" src="./app.js"></script>
+
+</body>
+
+</html>

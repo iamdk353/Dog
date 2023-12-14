@@ -1,0 +1,89 @@
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+li {
+  transition: all 0.25s;
+}
+
+#img {
+  transition: all 0.2s linear;
+}
+
+#img:hover {
+  border-radius: 2vh;
+  transform: scale(1.02);
+}
+
+#lastGrid {
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media(min-width: 1600px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media(min-width: 1800px) {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  @media(min-width: 2000px) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+
+}
+
+#main {
+  @media (max-width: 400px) {
+    width: 50vh;
+  }
+}
+
+#photo {
+  @media (max-width: 400px) {
+    width: 50vh;
+  }
+}
+
+#Quiz {
+  @media (max-width: 400px) {
+    display: none;
+  }
+}
+
+#quizMode {
+  @media (max-width: 400px) {
+    display: none;
+    opacity: 0;
+  }
+}
+
+#img:hover {
+  box-shadow: 2px 4px 8px rgb(21, 21, 21);
+
+}
+
+
+
+svg {
+  cursor: pointer;
+}
