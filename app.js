@@ -111,7 +111,7 @@ function extendImg() {
 }
 // setInterval(getDog, 3000);
 function addLoading() {
-  let svg = `<svg viewBox="0 0 691 756" style="width:58vh;overflow:hidden;">
+  let svg = `<svg viewBox="0 0 691 756" style="overflow:hidden; margin-x:auto" id="loader">
   
   <circle cx="179.10794" cy="181.97066" r="143.89207" fill="#6f1413" />
   <path

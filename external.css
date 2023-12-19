@@ -54,19 +54,29 @@ li {
 
 #main {
   @media (max-width: 400px) {
-    width: 50vh;
+    width: 45vh;
   }
 }
 
 #photo {
   @media (max-width: 400px) {
-    width: 50vh;
+    width: 45vh;
   }
 }
 
 #Quiz {
   @media (max-width: 400px) {
     display: none;
+  }
+}
+
+#loader {
+  @media (max-width: 400px) {
+    width: 42vh;
+  }
+
+  @media (min-width: 400px) {
+    width: 58vh;
   }
 }
 
